@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="STYLESHEET" type="text/css" href="estilo.css">
+<script type = "text/javascript">
+		  var timer;
+          function nextGij() {
+              xGij==1;
+			  if(xGij==0){
+				document.getElementById("gij1Img").src = imagesGij[0];
+				document.getElementById("gij2Img").src = imagesGij[1];
+				document.getElementById("gij3Img").src = imagesGij[2];
+				document.getElementById("gij1Img").href = "#";
+				document.getElementById("gij2Img").href = "#";
+				document.getElementById("gij3Img").href = "#";
+				document.getElementById("gij1txt").href = "Hangar 18";
+				document.getElementById("gij2txt").href = "Videoclub de los 80";
+				document.getElementById("gij3txt").href = "El retrato de Dorian Gray";
+			  } else if(xGij==1){
+			  document.getElementById("gij1Img").src = imagesGij[4];
+				document.getElementById("gij2Img").src = imagesGij[5];
+				document.getElementById("gij3Img").src = imagesGij[6];
+				document.getElementById("gij1Img").href = "index.html";
+				document.getElementById("gij2Img").href = "index.html";
+				document.getElementById("gij3Img").href = "index.html";
+				document.getElementById("gij1txt").href = "Videoclub de los 80";
+				document.getElementById("gij2txt").href = "Videoclub de los 80";
+				document.getElementById("gij3txt").href = "Videoclub de los 80";
+			  }
+		  }
+
+          function prevGij() {
+              xGij--;
+			  if(xGij==0){
+				document.getElementById("gij1Img").src = imagesGij[0];
+				document.getElementById("gij2Img").src = imagesGij[1];
+				document.getElementById("gij3Img").src = imagesGij[2];
+				document.getElementById("gij1Img").href = "#";
+				document.getElementById("gij2Img").href = "#";
+				document.getElementById("gij3Img").href = "#";
+				document.getElementById("gij1txt").href = "Hangar 18";
+				document.getElementById("gij2txt").href = "Videoclub de los 80";
+				document.getElementById("gij3txt").href = "El retrato de Dorian Gray";
+			  } else if(xGij==1){
+			  document.getElementById("gij1Img").src = imagesGij[4];
+				document.getElementById("gij2Img").src = imagesGij[5];
+				document.getElementById("gij3Img").src = imagesGij[6];
+				document.getElementById("gij1Img").href = "index.html";
+				document.getElementById("gij2Img").href = "index.html";
+				document.getElementById("gij3Img").href = "index.html";
+				document.getElementById("gij1txt").href = "Videoclub de los 80";
+				document.getElementById("gij2txt").href = "Videoclub de los 80";
+				document.getElementById("gij3txt").href = "Videoclub de los 80";
+			  }
+		  }
+
+          var imagesOvi = [], imagesAvi = [], imagesGij = [], xGij = 0;
+          imagesGij[0] = "multimedia/h18.jpg";
+          imagesGij[1] = "multimedia/videoclub.png";
+          imagesGij[2] = "multimedia/doriangray.jpg";
+		  imagesGij[3] = "multimedia/videoclub.png";
+          imagesGij[4] = "multimedia/videoclub.png";
+          imagesGij[5] = "multimedia/videoclub.png";
+		  </script>
+
+<header class="header">
+  <a href="#" class="logo">No Exit</a>
+  <nav class="nav-items">
+   <a href="index.html">Inicio</a>
+	<a href="salas.html">Salas de asturias</a>
+	<a href="#.html">Nuestras aventuras</a>
+	<a href="#.html">Ranking</a>
+    <a href="#.html">Sobre nosotros</a>
+	<div class="animation start-asturias"></div>
+  </nav>
+</header>
+
+<main>
+<div class="recents">
+  <div class="recentstext">
+  <h2 class="escapestitle">Escape rooms en Oviedo</h2>
+  </div>
+  <div class="recentreviews">
+    <div class="review">
+	<img src="multimedia/h18.jpg" alt="Imagen de Hangar 18">
+      <p class="review-heading">Hangar 18</p>
+    </div>
+    <div class="review">
+	<img src="multimedia/videoclub.png" alt="Imagen de Videoclub de los 80">
+      <p class="review-heading">Videoclub de los 80</p>
+    </div>
+    <div class="review">
+	<img src="multimedia/doriangray.jpg" alt="Imagen de El retrato de Dorian Gray">
+      <p class="review-heading">El retrato de Dorian Gray</p>
+    </div>
+	 </div>
+	 <nav class="pagination" aria-label="Entradas">
+		<div class="nav-links">
+		<a class="page-numbers" href="#">1</a>
+		<a class="page-numbers" href="#">2</a>
+		<a class="page-numbers" href="#">3</a>
+		<a class="page-numbers" href="#">4</a>
+		<a class="page-numbers" href="#">5</a>
+		</div>
+	</nav>
+  </div>
+   <div class="recents">
+  <div class="recentstext">
+  <h2 class="escapestitle">Escape rooms en Gijón</h2>
+  </div>
+  <div class="recentreviews">
+    <div class="review">
+	<img src="multimedia/h18.jpg" href="" id="gij1Img" alt="Imagen de Hangar 18">
+      <p class="review-heading" id="gij1txt">Hangar 18</p>
+    </div>
+    <div class="review">
+	<img src="multimedia/videoclub.png" href="" id="gij2Img" alt="Imagen de Videoclub de los 80">
+      <p class="review-heading" id="gij2txt">Videoclub de los 80</p>
+    </div>
+    <div class="review">
+	<img src="multimedia/doriangray.jpg" href="" id="gij3Img" alt="Imagen de El retrato de Dorian Gray">
+      <p class="review-heading" id="gij3txt">El retrato de Dorian Gray</p>
+    </div>
+	 </div>
+	 <nav class="navigation pagination" aria-label="Entradas">
+		<div class="nav-links"></a>
+		<a class="page-numbers" onclick="prevGij()" >1</a>
+		<a class="page-numbers" onclick="nextGij()" >2</a>
+		<a class="page-numbers" href="#">3</a>
+		<a class="page-numbers" href="#">4</a>
+		<a class="page-numbers" href="#">5</a>
+		</div>
+	</nav>
+  </div>
+   <div class="recents">
+  <div class="recentstext">
+  <h2 class="escapestitle">Escape rooms en Avilés</h2>
+  </div>
+  <div class="recentreviews">
+    <div class="review">
+	<img src="multimedia/h18.jpg" alt="Imagen de Hangar 18">
+      <p class="review-heading">Hangar 18</p>
+    </div>
+    <div class="review">
+	<img src="multimedia/videoclub.png" alt="Imagen de Videoclub de los 80">
+      <p class="review-heading">Videoclub de los 80</p>
+    </div>
+    <div class="review">
+	<img src="multimedia/doriangray.jpg" alt="Imagen de El retrato de Dorian Gray">
+      <p class="review-heading">El retrato de Dorian Gray</p>
+    </div>
+	 </div>
+	 <nav class="navigation pagination" aria-label="Entradas">
+		<div class="nav-links">
+		<a class="page-numbers" href="#">1</a>
+		<a class="page-numbers" href="#">2</a>
+		<a class="page-numbers" href="#">3</a>
+		<a class="page-numbers" href="#">4</a>
+		<a class="page-numbers" href="#">5</a>
+		</div>
+	</nav>
+  </div>
+  <div class="map">
+	<h2 class="title">Escape rooms en Asturias</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d327402.37821275886!2d-6.015546191981865!3d43.47081805760355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sescape%20room!5e0!3m2!1ses!2ses!4v1657484807085!5m2!1ses!2ses" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </div>
+ 
+</main>
+
+<footer class="footer">
+  <div class="copy">&copy; No Exit</div>
+  <div class="bottom-links">
+    <div class="links">
+      <span>Más información</span>
+      <a href="#">Inicio</a>
+      <a href="#">Salas de Asturias</a>
+      <a href="#">Nuestras aventuras</a>
+	  <a href="#">Ranking</a>
+      <a href="#">Sobre nosotros</a>
+    </div>
+    <div class="links">
+      <span>Redes sociales</span>
+      <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+      <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

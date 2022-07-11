@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #122c6e;
+}
+/* CSS for header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4295f5;
+ 
+  
+}
+
+.header .logo {
+  font-size: 25px;
+  font-family: 'Sriracha', cursive;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 30px;
+  
+}
+
+.nav-items {
+	margin-right: 100px;
+	position: relative;
+	width: 630px;
+	height: 50px;
+	background-color: #4295f5;
+	border-radius: 8px;
+	font-size: 0;
+}
+.nav-items a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 13px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+.nav-items .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+a:nth-child(1) {
+	width: 100px;
+}
+a:nth-child(2) {
+	width: 150px;
+}
+a:nth-child(3) {
+	width: 160px;
+}
+a:nth-child(4) {
+	width: 100px;
+}
+a:nth-child(5) {
+	width: 120px;
+}
+.nav-items .start-home, a:nth-child(1):hover~.animation {
+	width: 100px;
+	left: 0;
+	background-color: #1abc9c;
+}
+.nav-items .start-asturias, a:nth-child(2):hover~.animation {
+	width: 150px;
+	left: 100px;
+	background-color: #e74c3c;
+}
+.nav-items .start-reviews, a:nth-child(3):hover~.animation {
+	width: 160px;
+	left: 250px;
+	background-color: #3498db;
+}
+.nav-items .start-ranking, a:nth-child(4):hover~.animation {
+	width: 100px;
+	left: 410px;
+	background-color: #9b59b6;
+}
+.nav-items .start-about, a:nth-child(5):hover~.animation {
+	width: 120px;
+	left: 510px;
+	background-color: #e67e22;
+}
+
+.pagination {
+    display: table;
+    float: none;
+    clear: both;
+    margin: 2.5em auto;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+.pagination span, .pagination a {
+    background-color: #4295f5;
+}
+
+.pagination span, .pagination a {
+    display: block;
+    position: relative;
+    float: left;
+    height: 3em;
+    width: 3em;
+    margin-right: 3px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 3;
+    text-decoration: none;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+	color: #fff;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px;
+}
+
+.map .title{
+  font-size: 35px;
+  align-items: center;
+  padding: 20px 40px;
+  color: #fff;
+  background: linear-gradient(
+    to right, 
+    hsl(20 100% 50%), 
+    hsl(400 100% 59%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 520px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 0px;
+}
+
+.intro .introImg {
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  margin-left: auto;
+  margin-top: 15px;
+  margin-right: auto;
+  display: block;
+  border: 10px solid white;
+  border-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><defs><linearGradient id='redgradient'><stop offset='0' stop-color='%23FFC14D'/><stop offset='0.362' stop-color='%23FF4834'/><stop offset='1' stop-color='%233B0300'/></linearGradient></defs><g id='Layer_1'><path d='M0,0 L50,0 L50,50 L0,50 L0,0 z' fill='url(%23redgradient)' width='100%' height='100%'/></g></svg>") 10% stretch;
+}
+
+.intro .btnleft {
+  position: absolute;
+  top: 340px;
+  left: 170px;
+  border: none;
+  width: 117px;
+  height: 70px;
+  background: url("leftarrow.png");
+
+}
+
+.intro .btnleft:hover {
+transform: scale(1.15);
+}
+
+.intro .btnright {
+  position: absolute;
+  top: 340px;
+  right: 170px;
+  border: none;
+  width: 117px;
+  height: 70px;
+  background: url("rightarrow.png");
+
+}
+.intro .btnright:hover {
+transform: scale(1.15);
+}
+
+.recentstext{
+	 display: flex;
+  flex-direction: column;
+	align-items: center;
+  justify-content: center;
+}
+
+
+.escapestitle{
+  font-size: 35px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  color: #fff;
+  background: linear-gradient(
+    to right, 
+    hsl(20 100% 50%), 
+    hsl(400 100% 59%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.recentstitle{
+  font-size: 35px;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 80px;
+  color: #fff;
+  background: linear-gradient(
+    to right, 
+    hsl(20 100% 50%), 
+    hsl(400 100% 59%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.recentreviews {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 80px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.recents .review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.recents .review img {
+  width: 80%;
+  height: 80%;
+  padding: 12px;
+}
+
+.recents .review img:hover {
+transform: scale(1.15);
+}
+
+.recents .review .review-heading {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 10px 0;
+  
+}
+
+.recents .review .review-text {
+  font-size: 15px;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 40px;
+}
+
+.about-me img {
+  margin: 30px 30px;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 10px solid white;
+  border-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><defs><linearGradient id='redgradient'><stop offset='0' stop-color='%23FFC14D'/><stop offset='0.362' stop-color='%23FF4834'/><stop offset='1' stop-color='%233B0300'/></linearGradient></defs><g id='Layer_1'><path d='M0,0 L50,0 L50,50 L0,50 L0,0 z' fill='url(%23redgradient)' width='100%' height='100%'/></g></svg>") 10% stretch;
+}
+
+.about-me-text {
+	padding: 40px 80px;
+	margin-right: 150px;
+  --borderWidth: 3px;
+  position: relative;
+  background-color: #122c6e;
+  border-radius: var(--borderWidth);
+}
+.about-me-text:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.about-me-text h2 {
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+
+}
+
+.about-me-text p {
+  font-size: 15px;
+  color: #fff;
+}
+/* CSS for footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4295f5;
+  padding: 40px 80px;
+}
+
+.footer .copy {
+  color: #fff;
+}
+
+.bottom-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.bottom-links .links {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 40px;
+  align-items: up
+}
+
+.bottom-links .links span {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.bottom-links .links a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 10px;
+}

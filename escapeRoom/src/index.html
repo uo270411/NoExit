@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="STYLESHEET" type="text/css" href="estilo.css">
+ <script type = "text/javascript">
+		  var timer;
+          function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+			  document.getElementById("introImg").src = images[x];
+			  clearInterval(timer);
+			  timer = setInterval(displayNextImage, 5000);
+		  }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+			  document.getElementById("introImg").src = images[x];
+			  clearInterval(timer);
+			  timer = setInterval(displayNextImage, 5000);
+		  }
+
+          function startTimer() {
+              timer = setInterval(displayNextImage, 5000);
+          }
+
+          var images = [], x = -1;
+          images[0] = "multimedia/img1.jpg";
+          images[1] = "multimedia/img2.jpg";
+          images[2] = "multimedia/img3.jpg";
+		  images[3] = "multimedia/img4.jpg";
+          images[4] = "multimedia/img5.jpg";
+          images[5] = "multimedia/img6.jpg";
+		  </script>
+
+<body onload="startTimer()">
+<header class="header">
+  <a href="#" class="logo">No Exit</a>
+  <nav class="nav-items">
+    <a href="index.html">Inicio</a>
+	<a href="salas.html">Salas de asturias</a>
+	<a href="#.html">Nuestras aventuras</a>
+	<a href="#.html">Ranking</a>
+    <a href="#.html">Sobre nosotros</a>
+	<div class="animation start-home"></div>
+  </nav>
+</header>
+
+<main>
+  <div class="intro" id="intro">
+	<img class ="introImg" id ="introImg" src="multimedia/img1.jpg" alt="Nuestro grupo">
+	<button class="btnleft" type="button" onclick="displayPreviousImage()"></button>
+    <button class="btnright" type="button" onclick="displayNextImage()"></button>
+  </div>
+  <div class="recents">
+  <div class="recentstext">
+  <h2 class="recentstitle">Nuestras aventuras más recientes</h2>
+  </div>
+  <div class="recentreviews">
+    <div class="review">
+	<img src="multimedia/h18.jpg" alt="Imagen de Hangar 18">
+      <p class="review-heading">Hangar 18</p>
+    </div>
+    <div class="review">
+	<img src="multimedia/videoclub.png" alt="Imagen de Videoclub de los 80">
+      <p class="review-heading">Videoclub de los 80</p>
+    </div>
+    <div class="review">
+	<img src="multimedia/doriangray.jpg" alt="Imagen de El retrato de Dorian Gray">
+      <p class="review-heading">El retrato de Dorian Gray</p>
+    </div>
+	 </div>
+  </div>
+  <div class="about-me">
+    <div class="about-me-text">
+      <h2>Quienes somos</h2>
+      <p>Somos un grupo de asturias de escape room...</p>
+    </div>
+    <img src="multimedia/img1.jpg" alt="Nuestro grupo">
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="copy">&copy; No Exit</div>
+  <div class="bottom-links">
+    <div class="links">
+      <span>Más información</span>
+      <a href="index.html">Inicio</a>
+      <a href="salas.html">Salas de Asturias</a>
+      <a href="#">Nuestras aventuras</a>
+	  <a href="#">Ranking</a>
+      <a href="#">Sobre nosotros</a>
+    </div>
+    <div class="links">
+      <span>Redes sociales</span>
+      <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+      <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
